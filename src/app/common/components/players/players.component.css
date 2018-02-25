@@ -1,0 +1,92 @@
+.player {
+    opacity: 0;
+    position: absolute;
+    width: 140px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: 56px 56px;
+    background-position: center left;            
+    -webkit-animation: load 1s ease-in-out 1s forwards;
+    animation: load 1s ease-in-out 1s forwards;
+    
+}
+
+.player div {
+    margin-left: 60px;
+    margin-top: 9px;
+    color:#fff;
+}
+
+.player.left-bottom, .player.left-top {
+    background-position: center right;
+}
+
+.player.left-bottom  div, .player.left-top div {
+    margin-right: 60px;
+    margin-left: 0px;
+    margin-top: 9px;
+    color:#fff;
+    text-align: right;
+}
+
+.player.top-left {
+    top: -20%;
+    left: 10%;
+    background-image: url('/../assets/img/avatar/1.png');
+  }
+
+.player.top-center {
+    top: -20%;
+    left: 46%;
+    margin-left: -25px;
+    background-image: url('/../assets/img/avatar/2.png');    
+  }
+
+.player.top-right {
+    top: -20%;
+    right: 4%;
+    background-image: url('/../assets/img/avatar/3.png'); 
+  }
+
+.player.bottom-left {
+    bottom: -20%;
+    left: 10%;
+    background-image: url('/../assets/img/avatar/4.png');
+  }
+
+.player.bottom-center {
+    bottom: -20%;
+    left: 46%;
+    margin-left: -25px;
+    background-image: url('/../assets/img/avatar/5.png');
+  }
+
+.player.bottom-right {
+    bottom: -20%;
+    right: 4%;
+    background-image: url('/../assets/img/avatar/6.png');
+  }
+
+.player.left-top {
+    bottom: 20%;
+    left: -24%;
+    background-image: url('/../assets/img/avatar/7.png');
+  }
+
+.player.left-bottom {
+    top: 20%;
+    left: -24%;
+    background-image: url('/../assets/img/avatar/8.png');
+  }
+
+.player.right-top {
+    top: 20%;
+    right: -24%;
+    background-image: url('/../assets/img/avatar/9.png');
+  }
+
+.player.right-bottom {
+    bottom: 20%;
+    right: -24%;
+    background-image: url('/../assets/img/avatar/9.png');
+  }
