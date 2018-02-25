@@ -10,7 +10,6 @@ import { TableComponent } from './common/components/table/table.component';
 import { BluffComponent } from './games/bluff/bluff.component';
 import { componentFactoryName } from '@angular/compiler';
 import { HomeComponent } from './common/components/home/home.component';
-import { PlayersComponent } from './common/components/players/players.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { PlayersComponent } from './common/components/players/players.component'
     ProfileComponent,
     TableComponent,
     BluffComponent,
-    HomeComponent,
-    PlayersComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
