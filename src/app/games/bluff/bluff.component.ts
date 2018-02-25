@@ -11,5 +11,4 @@ export class BluffComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

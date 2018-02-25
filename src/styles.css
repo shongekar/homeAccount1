@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background:#160f30;
+}
+
+body::after {
+    content: "";
+    background-image: url("http://www.publicdomainpictures.net/pictures/150000/velka/wall-pattern.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
