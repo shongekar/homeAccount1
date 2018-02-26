@@ -1,0 +1,8 @@
+<div class="progress" [style.width]="barWidth">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" [ngClass]="{
+    'bg-success': state === 'ok',
+    'bg-warning': state === 'warn',
+    'bg-danger': state === 'danger'
+  }" role="progressbar" [style.width]="timeleft" aria-valuemin="0" aria-valuemax="100">
+  </div>
+</div>

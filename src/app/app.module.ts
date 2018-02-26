@@ -10,6 +10,7 @@ import { TableComponent } from './common/components/table/table.component';
 import { BluffComponent } from './games/bluff/bluff.component';
 import { componentFactoryName } from '@angular/compiler';
 import { HomeComponent } from './common/components/home/home.component';
+import { TimerComponent } from './common/components/timer/timer.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HomeComponent } from './common/components/home/home.component';
     ProfileComponent,
     TableComponent,
     BluffComponent,
-    HomeComponent
+    HomeComponent,
+    TimerComponent
   ],
   imports: [
     BrowserModule,
