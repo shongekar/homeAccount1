@@ -1,3 +1,16 @@
-<p>
-  profile works!
-</p>
+<div class="image-center" *ngFor ="let profile of profObj" >  
+  <div class={{profile.avatarShape}}>
+    <p style="padding: 0 7em 2em 0">
+    <img src={{profile.path}} title={{profile.name}}/>
+    </p>
+  </div>
+</div>
+
+<!-- <div>
+  <div class="circle">
+      <img src={{url1}} />
+      <div class="middle">
+        <div class="text">Indu</div>
+      </div>
+  </div>
+</div> -->
