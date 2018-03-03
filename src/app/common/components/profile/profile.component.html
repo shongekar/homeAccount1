@@ -1,13 +1,11 @@
 <div  *ngFor ="let profile of profObj">
-    <a class="thumbnail">
-        <div class="shapes-wrapper {{profile.avatarShape}}" [style.background]="borderColor" [style.width]="getSize(size)" [style.height]="getSize(size)">
-            <div class="circle-wrapper">
-                <div class="circle circle-left-half" [style.border-width]="getSize(size)"></div>
-                <div class="circle circle-right-half" [style.border-width]="getSize(size)"></div>
-                <div class="box-left-half"></div>
-            </div>
-            <div class="shape-inner {{profile.avatarShape}}" [ngStyle]="{ 'background-image': 'url(' + profile.path + ')'}"></div>
+    <div class="shapes-wrapper {{profile.avatarShape}} thumbnail" [style.background]="borderColor" [style.width]="getSize(size)" [style.height]="getSize(size)">
+        <div class="circle-wrapper">
+            <div class="circle circle-left-half" [style.border-width]="getSize(size)"></div>
+            <div class="circle circle-right-half" [style.border-width]="getSize(size)"></div>
+            <div class="box-left-half"></div>
         </div>
-    </a>
-        <div id="title" [style.width]="getSize(size)">{{profile.name}}</div>
-    </div>
+        <div class="shape-inner {{profile.avatarShape}}" [ngStyle]="{ 'background-image': 'url(' + profile.path + ')'}"></div>
+</div>
+    <div id="title" [style.width]="getSize(size)">{{profile.name}}</div>
+</div>
