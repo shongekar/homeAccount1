@@ -1,16 +1,13 @@
-<div class="image-center" *ngFor ="let profile of profObj" >  
-  <div class={{profile.avatarShape}}>
-    <p style="padding: 0 7em 2em 0">
-    <img src={{profile.path}} title={{profile.name}}/>
-    </p>
-  </div>
-</div>
-
-<!-- <div>
-  <div class="circle">
-      <img src={{url1}} />
-      <div class="middle">
-        <div class="text">Indu</div>
-      </div>
-  </div>
-</div> -->
+<div  *ngFor ="let profile of profObj">
+    <a class="thumbnail">
+        <div class="shapes-wrapper {{profile.avatarShape}}" [style.background]="borderColor" [style.width]="getSize(size)" [style.height]="getSize(size)">
+            <div class="circle-wrapper">
+                <div class="circle circle-left-half" [style.border-width]="getSize(size)"></div>
+                <div class="circle circle-right-half" [style.border-width]="getSize(size)"></div>
+                <div class="box-left-half"></div>
+            </div>
+            <div class="shape-inner {{profile.avatarShape}}" [ngStyle]="{ 'background-image': 'url(' + profile.path + ')'}"></div>
+        </div>
+    </a>
+        <div id="title" [style.width]="getSize(size)">{{profile.name}}</div>
+    </div>
