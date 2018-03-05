@@ -15,15 +15,15 @@ export class ProfileComponent implements OnInit {
   @Input('size') public size = 'medium';
 
   // below values comes from database
-  profObj = [{userID: '1', name: 'INDU', path: 'http://bootdey.com/img/Content/avatar/avatar3.png', avatarShape: 'hexagon'},
-             {userID: '2', name: 'DIVS', path: 'https://avatarfiles.alphacoders.com/115/115265.png', avatarShape: 'parallelogram'},
-             {userID: '3', name: 'RAKI', path: 'http://www.newsshare.in/wp-content/uploads/2017/04/Miniclip-8-Ball-Pool-Avatar-15.png',
+  profObj = [{userID: '1', name: 'INDU', path: 'assets/ProfileImages/1.png', avatarShape: 'hexagon'},
+             {userID: '2', name: 'DIVS', path: 'assets/ProfileImages/2.png', avatarShape: 'parallelogram'},
+             {userID: '3', name: 'RAKI', path: 'assets/ProfileImages/3.png',
               avatarShape: 'pentagon'},
              {userID: '4', name: 'VIJI',
-              path: 'https://images.clipartlogo.com/files/istock/previews/9730/97305655-avatar-icon-of-girl-in-a-wide-brim-felt-hat.jpg',
+              path: 'assets/ProfileImages/4.jpg',
               avatarShape: 'circle-360'},
              {userID: '5', name: 'RAKS',
-              path: 'https://i.pinimg.com/474x/4b/5d/19/4b5d1954fbb5b6bad18f0ac25c4ab3c3--free-avatars-create-your-own-avatar.jpg',
+              path: 'assets/ProfileImages/5.jpg',
               avatarShape: 'square'}
  ];
 
