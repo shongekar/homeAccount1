@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  borderColor = 'grey'; // color same as table border
-  size = 'medium';
+  // borderColor = 'grey'; // color same as table border
+  // size = 'medium';
+
+  // tslint:disable-next-line:no-input-rename
+  @Input('borderColor') public borderColor = 'grey';
+  @Input('size') public size = 'medium';
 
   // below values comes from database
   profObj = [{userID: '1', name: 'INDU', path: 'http://bootdey.com/img/Content/avatar/avatar3.png', avatarShape: 'hexagon'},
@@ -19,7 +23,7 @@ export class ProfileComponent implements OnInit {
               path: 'https://images.clipartlogo.com/files/istock/previews/9730/97305655-avatar-icon-of-girl-in-a-wide-brim-felt-hat.jpg',
               avatarShape: 'circle-360'},
              {userID: '5', name: 'RAKS',
-              path: 'https://i.pinimg.com/474x/4b/5d/19/4b5d1954fbb5b6bad18f0ac25c4ab3c3--free-avatars-create-your-own-avatar.jpg', 
+              path: 'https://i.pinimg.com/474x/4b/5d/19/4b5d1954fbb5b6bad18f0ac25c4ab3c3--free-avatars-create-your-own-avatar.jpg',
               avatarShape: 'square'}
  ];
 
