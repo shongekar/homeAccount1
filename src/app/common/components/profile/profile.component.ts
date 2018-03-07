@@ -15,16 +15,12 @@ export class ProfileComponent implements OnInit {
   @Input('size') public size = 'medium';
 
   // below values comes from database
-  profObj = [{userID: '1', name: 'INDU', path: 'assets/ProfileImages/1.png', avatarShape: 'hexagon'},
-             {userID: '2', name: 'DIVS', path: 'assets/ProfileImages/2.png', avatarShape: 'parallelogram'},
-             {userID: '3', name: 'RAKI', path: 'assets/ProfileImages/3.png',
-              avatarShape: 'pentagon'},
-             {userID: '4', name: 'VIJI',
-              path: 'assets/ProfileImages/4.jpg',
-              avatarShape: 'circle-360'},
-             {userID: '5', name: 'RAKS',
-              path: 'assets/ProfileImages/5.jpg',
-              avatarShape: 'square'}
+  profObj = [
+    // {userID: '1', name: 'INDU', path: 'assets/ProfileImages/1.png', avatarShape: 'hexagon', currentPlayer: true},
+  //            {userID: '2', name: 'DIVS', path: 'assets/ProfileImages/2.png', avatarShape: 'parallelogram', currentPlayer: false},
+             {userID: '3', name: 'RAKI', path: 'assets/ProfileImages/3.png', avatarShape: 'pentagon', currentPlayer: false},
+            //  {userID: '4', name: 'VIJI', path: 'assets/ProfileImages/4.jpg', avatarShape: 'circle-360', currentPlayer: false},
+            //  {userID: '5', name: 'RAKS', path: 'assets/ProfileImages/5.jpg', avatarShape: 'square', currentPlayer: false}
  ];
 
  // returns size in pixel based on large/medium/
