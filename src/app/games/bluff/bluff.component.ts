@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BluffComponent implements OnInit {
 
+  startOneMoreTImer = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  callMyFunction(){
+    console.log('Time is up!');
+    this.startOneMoreTImer = true;
   }
 
 }
