@@ -1,11 +1,11 @@
-<div  *ngFor ="let profile of profObj">
-    <div class="shapes-wrapper {{profile.avatarShape}} thumbnail" [style.background]="borderColor" [style.width]="getSize(size)" [style.height]="getSize(size)">
+    <div class="shapes-wrapper {{ profileObj.avatarShape }} thumbnail" [style.background]="borderColor" [style.width]="getSize(size)" [style.height]="getSize(size)">
+        <!-- This is to change appearence of avatar on mouse hover -->
         <div class="circle-wrapper">
             <div class="circle circle-left-half" [style.border-width]="getSize(size)"></div>
             <div class="circle circle-right-half" [style.border-width]="getSize(size)"></div>
             <div class="box-left-half"></div>
         </div>
-        <div class="shape-inner {{profile.avatarShape}}" [ngStyle]="{ 'background-image': 'url(' + profile.path + ')'}"></div>
+        <div class="shape-inner {{ profileObj.avatarShape }}" [ngStyle]="{ 'background-image': 'url(' + profileObj.path + ')'}"></div>
     </div>
-    <div id="title" [style.width]="getSize(size)">{{profile.name}}</div>
-</div>
+    <!-- This is to display Profile Name on mouse hover -->
+    <div id="title" [style.width]="getSize(size)">{{ profileObj.name }}</div>

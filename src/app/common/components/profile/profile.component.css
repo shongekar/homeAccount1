@@ -1,16 +1,11 @@
-
+  /* Container of Avatar */
   .shapes-wrapper {
     overflow: hidden;
     position: relative;
     display: inline-block;
   }
- 
-  .shapes-wrapper:hover .circle {
-    width: 100%;
-    border-left-color: red;
-    border-top-color: black;
-  }
   
+  /* For Avatar Border and changing appearence of avatar */
   .shapes-wrapper:hover .circle-left-half {
     transition: .5s transform linear;
     transform: rotate(135deg);
@@ -20,13 +15,7 @@
     transition: 1s transform linear;
     transform: rotate(315deg);
   }
-  
-  .shapes-wrapper:hover .box-left-half {
-    animation-name: box-removed;
-    animation-delay: .5s;
-    animation-fill-mode: forwards;
-  }
-  
+    
   .circle-wrapper {
     position: absolute;
     width: 100%;
@@ -65,7 +54,14 @@
     z-index: 3;
     opacity: 1;
   }
+
+  .shapes-wrapper:hover .circle {
+    width: 100%;
+    border-left-color: rgb(207, 44, 44);
+    border-top-color: black;
+  }
   
+  /* For diaplaying image inside the avatar shape */
   .shape-inner {
     width: calc(100% - 10px);
     height: calc(100% - 10px);
@@ -79,26 +75,13 @@
     z-index: 999;
   }
 
+  /* For grayscale on hover */
   .shape-inner:hover{
     filter: grayscale();
     opacity: 0.75;  
-  }    
-  
-  @keyframes box-removed {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 1;
-    }
-    50.001% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
   }
   
+  /* For different Avatar shapes */
   .star {
     -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
@@ -179,17 +162,18 @@
     clip-path: polygon(50% 0, 90% 30%, 50% 100%, 10% 30%);
   }
 
+/* To display Text on Hover */
  .thumbnail {
-	display: block;
+	  display: block;
     height: auto;
 }
 
 .thumbnail:hover + #title {
-	display: block;
+	  display: block;
 }
 
 #title {
-	display: none;
+	  display: none;
     color: black;
     text-align: center;
     font-size: 20px;
