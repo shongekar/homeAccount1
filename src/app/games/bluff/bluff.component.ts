@@ -5,11 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './bluff.component.html',
   styleUrls: ['./bluff.component.css']
 })
-export class BluffComponent implements OnInit {
+export class BluffComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+// Properties for card component
+public rank = 'A';
+public suit = 'spades';
 
 }

@@ -1,3 +1,11 @@
-<p>
-  card works!
-</p>
+<!-- display card card value and symbol selection -->
+<div class="card">
+  <div class="top"[style.color]="getColor(suit)">{{ rank }}</div>
+  <div [ngSwitch]="suit" [style.color]="getColor(suit)">
+      <div class="center" *ngSwitchCase="'hearts'">&hearts;</div>
+      <div class="center" *ngSwitchCase="'spades'">&spades;</div>
+      <div class="center" *ngSwitchCase="'club'">&clubs;</div>
+      <div class="center" *ngSwitchCase="'diamonds'">&diams;</div>
+  </div>
+  <div class="bottom"[style.color]="getColor(suit)">{{ rank }}</div>
+</div>
