@@ -11,6 +11,7 @@ import { BluffComponent } from './games/bluff/bluff.component';
 import { componentFactoryName } from '@angular/compiler';
 import { HomeComponent } from './common/components/home/home.component';
 import { TimerComponent } from './common/components/timer/timer.component';
+import { TestComponentComponent } from './common/components/test-component/test-component.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { TimerComponent } from './common/components/timer/timer.component';
     TableComponent,
     BluffComponent,
     HomeComponent,
-    TimerComponent
+    TimerComponent,
+    TestComponentComponent
   ],
   imports: [
     BrowserModule,
