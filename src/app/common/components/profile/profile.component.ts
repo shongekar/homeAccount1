@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'db-app-profile',
@@ -7,8 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProfileComponent{
 
-  @Input('borderColor') public borderColor = 'grey';
-  @Input('size') public size = 'medium';
+  @Input('borderColor') public borderColor:string = 'grey';
+  @Input('size') public size:string = 'medium';
   @Input('profileObj') public profileObj;
 
  // returns size in pixel based on large/medium

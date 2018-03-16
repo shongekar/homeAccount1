@@ -1,12 +1,12 @@
   /* Container of Avatar */
-  .shapes-wrapper {
+  .dbShapes-wrapper {
     overflow: hidden;
     position: relative;
     display: inline-block;
   }
   
   /* For diaplaying image inside the avatar shape */
-  .shape-inner {
+  .dbShape-inner {
     width: calc(100% - 10px);
     height: calc(100% - 10px);
     position: absolute;
@@ -19,7 +19,7 @@
   }
 
   /* For grayscale on hover */
-  .shape-inner:hover{
+  .dbShape-inner:hover{
     filter: grayscale();
   }
   
@@ -105,16 +105,16 @@
   }
 
 /* To display Text on Hover */
- .thumbnail {
+ .dbThumbnail {
 	  display: block;
     height: auto;
 }
 
-.thumbnail:hover + #title {
+.dbThumbnail:hover + #dbTitle {
 	  display: block;
 }
 
-#title {
+#dbTitle {
 	  display: none;
     color: black;
     text-align: center;
