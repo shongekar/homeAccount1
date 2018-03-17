@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormDataValidator } from '../../../validators/form-data.validator';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { Angular2TokenService } from 'angular2-token';
 
 @Component({
   selector: 'db-game-form',
@@ -9,8 +11,22 @@ import { FormDataValidator } from '../../../validators/form-data.validator';
 })
 
 export class GameFormComponent implements OnInit {
+  // project: any;
+  // projectService: any;
+  // @ViewChild('fileInput') fileInput;
 
-  constructor() { }
+  // constructor(private tokenService: Angular2TokenService) { }  upload() {
+  //   let fileBrowser = this.fileInput.nativeElement;
+  //   if (fileBrowser.files && fileBrowser.files[0]) {
+  //     const formData = new FormData();
+  //     formData.append("image", fileBrowser.files[0]);
+  //     this.projectService.upload(formData, this.project.id).subscribe(res => {
+  //       // do stuff w/my uploaded file
+  //     });
+  //   }
+  // }
+
+
 
   ngOnInit() {
     this.getMaxNumberOfPlayers();

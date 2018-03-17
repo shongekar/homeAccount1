@@ -1,30 +1,44 @@
 <form [formGroup]="form">
   <mat-form-field>
-      <mat-select formControlName="playerCount" placeholder="Number of players" required>
-          <mat-option *ngFor="let number of arrayOfNumberOfPlayers" [value]="number">{{ number }}</mat-option>
-      </mat-select>
-  </mat-form-field>
-  <br>
-  <mat-form-field>
-    <mat-select formControlName="deckCount" placeholder="Number of Decks" required>
-      <mat-option *ngFor="let number of arrayOfNumberOfDecks" [value]="number">{{ number }}</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <br>
-  <mat-form-field>
-    <input matInput formControlName="gameName" placeholder="Game Name" required type="text">
+    <input matInput formControlName="gameName" placeholder="First name" required type="text">
     <mat-error *ngIf="gameName.touched && gameName.errors && gameName.errors.spacialChars && gameName.value !== ''">The data must not contain spacial characters or spaces</mat-error>
   </mat-form-field>
   <br>
   <mat-form-field>
-    <input matInput formControlName="gameCode" placeholder="Game Code" required type="text">
+    <input matInput formControlName="gameName" placeholder="Last name" required type="text">
+    <mat-error *ngIf="gameName.touched && gameName.errors && gameName.errors.spacialChars && gameName.value !== ''">The data must not contain spacial characters or spaces</mat-error>
   </mat-form-field>
   <br>
   <mat-form-field>
-      <input matInput formControlName="playerTimeout" placeholder="Player Timeout (Sec)" required>
+    <input matInput formControlName="gameName" placeholder="Email address" required type="text">
+    <mat-error *ngIf="gameName.touched && gameName.errors && gameName.errors.spacialChars && gameName.value !== ''">The data must not contain spacial characters or spaces</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput formControlName="gameCode" placeholder="Mobile number" required type="text">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+      <input matInput formControlName="playerTimeout" placeholder="New password" required>
       <mat-error *ngIf="playerTimeout.touched && playerTimeout.errors && !playerTimeout.errors.isNumber && playerTimeout.value !== ''">The data must be number</mat-error>
   </mat-form-field>
   <br>
-  <button mat-raised-button color="primary" (click)="submitValue()">Submit</button> 
+  <mat-form-field>
+    <mat-select formControlName="playerCount" placeholder="Select gender" required>
+        <mat-option *ngFor="let number of arrayOfNumberOfPlayers" [value]="number">{{ number }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Birthday">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" (click)="submitValue()">Create account</button> 
   <button mat-raised-button color="primary">Close</button>
 </form>
+<br>
+
+<input type="file" #fileInput placeholder="Upload file..." />
+<button type="button" (click)="upload()">Upload</button>
