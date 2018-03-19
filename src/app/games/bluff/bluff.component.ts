@@ -7,8 +7,4 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BluffComponent {
 
-// Properties for card component
-public rank = 'A';
-public suit = 'spades';
-
 }

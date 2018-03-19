@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'db-app-card',
@@ -7,15 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardComponent {
 
-  @Input ('rank') public rank: string = 'A';   // card value
-  @Input ('suit') public suit = 'spades'; // card symbols
+  @Input ('cardData') public cardData;  // card data
 
   public getColor(symbol: string): string {
     if  (symbol === 'hearts' || symbol === 'diamonds') {
-    return 'red';
-    } else {
-    return 'black';
+      return 'red';
+      } else {
+      return 'black';
+      }
     }
-  }
 
 }

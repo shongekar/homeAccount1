@@ -1,11 +1,19 @@
-<!-- display card card value and symbol selection -->
-<div class="card">
-  <div class="top"[style.color]="getColor(suit)">{{ rank }}</div>
-  <div [ngSwitch]="suit" [style.color]="getColor(suit)">
-      <div class="center" *ngSwitchCase="'hearts'">&hearts;</div>
-      <div class="center" *ngSwitchCase="'spades'">&spades;</div>
-      <div class="center" *ngSwitchCase="'club'">&clubs;</div>
-      <div class="center" *ngSwitchCase="'diamonds'">&diams;</div>
+<!-- display card value and symbol -->
+<div class="dbCard">
+  <div class="dbTop"[style.color]="getColor(cardData.suit)">{{ cardData.rank }}</div>
+  <div [ngSwitch]="cardData.suit" [style.color]="getColor(cardData.suit)">
+      <div class="dbTop" *ngSwitchCase="'hearts'">&hearts;</div>
+      <div class="dbTop" *ngSwitchCase="'spades'">&spades;</div>
+      <div class="dbTop" *ngSwitchCase="'club'">&clubs;</div>
+      <div class="dbTop" *ngSwitchCase="'diamonds'">&diams;</div>
+      <div class="dbCenter" *ngSwitchCase="'hearts'">&hearts;</div>
+      <div class="dbCenter" *ngSwitchCase="'spades'">&spades;</div>
+      <div class="dbCenter" *ngSwitchCase="'club'">&clubs;</div>
+      <div class="dbCenter" *ngSwitchCase="'diamonds'">&diams;</div>
+      <div class="dbBottom" *ngSwitchCase="'hearts'">&hearts;</div>
+      <div class="dbBottom" *ngSwitchCase="'spades'">&spades;</div>
+      <div class="dbBottom" *ngSwitchCase="'club'">&clubs;</div>
+      <div class="dbBottom" *ngSwitchCase="'diamonds'">&diams;</div>
   </div>
-  <div class="bottom"[style.color]="getColor(suit)">{{ rank }}</div>
+  <div class="dbBottom"[style.color]="getColor(cardData.suit)">{{ cardData.rank }}</div>
 </div>

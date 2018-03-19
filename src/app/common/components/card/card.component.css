@@ -1,7 +1,8 @@
-.card {
+.dbCard {
     background: white;
-    width: 4%;
-    height: auto;
+    min-width: 5%;
+    width: auto !important;
+    height: 15%;
     font-size: 70%;
     border-radius: 10px;
     padding: 2px;
@@ -10,17 +11,16 @@
     margin: 1%
 }
 
-.top {
+.dbTop {
     text-align: left;
-
 }
 
-.bottom {
-    text-align: right;
-    
+.dbBottom {
+    text-align: left;
+    -webkit-transform: rotate(-180deg);
 }
 
-.center{
+.dbCenter{
     text-align: center;
     font-size: 100%;
 }
