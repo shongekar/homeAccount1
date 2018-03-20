@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-profile',
+  selector: 'db-app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent{
 
-  constructor() { }
+  @Input('borderColor') public borderColor:string = 'grey';
+  @Input('size') public size:string = 'medium';
+  @Input('profileObj') public profileObj;
 
-  ngOnInit() {
+ // returns size in pixel based on large/medium
+  public getSize(size: string): string {
+    if (size === 'large') {
+      return '150px';
+    }
+    if (size === 'medium') {
+        return '100px';
+    }
   }
 
 }
