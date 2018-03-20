@@ -5,11 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './bluff.component.html',
   styleUrls: ['./bluff.component.css']
 })
-export class BluffComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class BluffComponent {
 
 }

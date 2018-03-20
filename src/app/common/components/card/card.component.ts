@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-card',
+  selector: 'db-app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
 
-  constructor() { }
+  @Input ('cardData') public cardData;  // card data
 
-  ngOnInit() {
-  }
+  public getColor(symbol: string): string {
+    if  (symbol === 'hearts' || symbol === 'diamonds') {
+      return 'red';
+      } else {
+      return 'black';
+      }
+    }
 
 }
