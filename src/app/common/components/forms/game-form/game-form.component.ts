@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormDataValidator } from '../../../validators/form-data.validator';
@@ -68,15 +69,15 @@ export class GameFormComponent implements OnInit {
 
   // Creating an array to display list of numbers
   getMaxNumberOfPlayers(){
-    for (var i = this.minimumNumberOfPlayers; i <= this.numberOfPlayers; i++){
-      this.arrayOfNumberOfPlayers.push(i);
+    for (var element = this.minimumNumberOfPlayers; element <= this.numberOfPlayers; element++){
+      this.arrayOfNumberOfPlayers.push(element);
     }
   }
 
   // Creating an array to display list of numbers
   getMaxNumberOfCardPacks(){
-    for (var i = this.minimumNumberOfCardPacks; i <= this.numberOfDecks; i++){
-      this.arrayOfNumberOfDecks.push(i);
+    for (var element = this.minimumNumberOfCardPacks; element <= this.numberOfDecks; element++){
+      this.arrayOfNumberOfDecks.push(element);
     }
   }
 
