@@ -16,17 +16,18 @@ export class ProfileFormComponent implements OnInit {
   size = 'medium';
 
   url: any;
-  onSelectFile(event:any) { // called each time file input changes
-    if (event.target.files && event.target.files[0]) {
+  onSelectFile(event:any) 
+  { // called each time file input changes
+    if (event.target.files && event.target.files[0]) 
+    {
       var reader = new FileReader();
-
       reader.readAsDataURL(event.target.files[0]); // read file as data url
-
-      reader.onload = (event:any) => { // called once readAsDataURL is completed
+      reader.onload = (event:any) => 
+      { // called once readAsDataURL is completed
         this.url = event.target.result;
       }
     }
-}
+  }
 
   constructor() { }
 
@@ -34,4 +35,11 @@ export class ProfileFormComponent implements OnInit {
   }
 
 }
-// handle @inputs, image url update, capture updated values , function to get nickname from email id
+
+
+// TODO: handle @inputs,
+//       image url update, 
+//       capture updated values , 
+//       function to get nickname from email id,
+//       validations to fields 
+//       ngIf for hover text profile component
