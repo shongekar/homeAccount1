@@ -1,0 +1,28 @@
+.dbProfileForm{
+    position: absolute;
+    top: 40%;
+    left:30%;
+}
+
+.dbProfilePic{
+    position: absolute;
+    top: 20%;
+    left:40%;
+    text-align: center;
+}
+
+input {
+    text-align: center; 
+}
+
+/* button{
+    margin-left: 100px
+} */
+
+
+  img{
+    max-width:180px;
+  }
+  input[type=file]{
+  padding:10px;
+  opacity: 0}

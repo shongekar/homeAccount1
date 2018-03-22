@@ -1,0 +1,38 @@
+<div class = "dbProfilePic" style="position:absolute;">
+  <label for="fileButton">
+    <db-app-profile [borderColor]="borderColor" [size]="size" [profileObj] = "profileObj"></db-app-profile>
+  </label>
+  <input id="fileButton" type='file' (change)="onSelectFile($event)">
+</div>
+
+<div class = "dbProfileForm">
+  <form [formGroup]="form"> 
+        <mat-form-field >
+            <input matInput placeholder="Nickname" [value]="nickname">
+        </mat-form-field>
+        <br>
+        <mat-form-field >
+            <input matInput placeholder="Firstname" [value]="nickname">
+        </mat-form-field>
+        <mat-form-field style="margin-left:20px;">
+            <input matInput placeholder="Lastname" [value]="nickname">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field>
+            <input matInput disabled="true" placeholder="Email"  [value]="email">
+        </mat-form-field>
+        <mat-form-field style="margin-left:20px;">
+          <input matInput [matDatepicker]="picker" placeholder="DOB">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <mat-form-field  style="width:400px">
+            <textarea matInput placeholder="Your Favorite Card Games"></textarea>
+         </mat-form-field>
+        <br>
+      <button style="margin-left:100px;" mat-raised-button color="primary" (click)="submitValue()">Save</button> 
+      <button mat-raised-button color="primary">Cancel</button>
+  </form>
+</div>

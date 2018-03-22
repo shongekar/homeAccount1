@@ -7,6 +7,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { CardComponent } from './common/components/card/card.component';
@@ -17,6 +19,7 @@ import { componentFactoryName } from '@angular/compiler';
 import { HomeComponent } from './common/components/home/home.component';
 import { TimerComponent } from './common/components/timer/timer.component';
 import { GameFormComponent } from './common/components/forms/game-form/game-form.component';
+import { ProfileFormComponent } from './common/components/forms/profile-form/profile-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { GameFormComponent } from './common/components/forms/game-form/game-form
     BluffComponent,
     HomeComponent,
     TimerComponent,
-    GameFormComponent
+    GameFormComponent,
+    ProfileFormComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,9 @@ import { GameFormComponent } from './common/components/forms/game-form/game-form
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
