@@ -1,0 +1,64 @@
+<div>
+    <h2>New User? Signup</h2>
+    <hr/>
+</div>
+<div >
+    <form [formGroup]="form">
+      <div>
+        <mat-form-field>
+          <input matInput formControlName="firstName" placeholder="First Name" required type="text">
+          <mat-error *ngIf="firstName.touched && firstName.errors && firstName.errors.spacialChars && firstName.value !== ''">First name must not contain spacial characters or spaces</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput formControlName="lastName" placeholder="Last Name" required type="text">
+          <mat-error *ngIf="lastName.touched && lastName.errors && lastName.errors.spacialChars && lastName.value !== ''">Last name must not contain spacial characters or spaces</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput formControlName="emailID" placeholder="Email address" required type="text">
+          <mat-error *ngIf="emailID.touched && emailID.errors && emailID.errors.spacialChars && emailID.value !== ''">Email ID must contain '@'</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput formControlName="password" placeholder="Password" required type="text">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput formControlName="confirmPassword" placeholder="Confirm Password" required type="text">
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="primary" (click)="submitValue()">Submit</button> 
+      <button mat-raised-button color="primary">Close</button>
+      </form>
+</div>
+
+    <!--
+    <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+        <div class="form-group">
+          <label class="label-color" for="fullname"><strong>User name</strong></label>
+          <input class="form-control" id="fullname" [(ngModel)]="signup.name" placeholder="User name" required name="uName" #fullname="ngModel"/>
+        </div>
+        <div [hidden]="fullname.valid || fullname.pristine" class="alert alert-danger">Name is required</div>
+        <div class="form-group">
+            <label for="emailField"><strong>Email address</strong></label>
+            <input type="email" class="form-control" id="emailField" [(ngModel)]="signup.email" required placeholder="test@test.com" name="uEmail" #email="ngModel"/>
+        </div>
+        <div [hidden]="email.valid || email.pristine" class="alert alert-danger">Email address is required</div>
+        <div class="form-group">
+          <label for="password"><strong>Password</strong></label>
+          <input type="password" class="form-control" id="password" [(ngModel)]="signup.password" name="password" (blur)="confirmPassword()" required placeholder="Password" #pswd="ngModel"/>
+        </div>
+          <div [hidden]="pswd.valid || pswd.pristine" class="alert alert-danger">Password is required</div>
+          <div class="form-group">
+          <label for="cnfpassword"><strong>Confirm Password</strong></label>
+          <input type="password" class="form-control" id="cnfpassword" [(ngModel)]="passwordConfirmationTxt" (blur)="confirmPassword()" name="passwordConfirmationTxt"/>
+        </div>
+        <div [hidden]="!passwordConfirmationFailed" class="alert alert-danger">Password did not match</div>
+      <button type="submit" [disabled]="!signupForm.form.valid">Submit</button>
+      <button type="cancel" >Cancel</button>
+    </form>-->
