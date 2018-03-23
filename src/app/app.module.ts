@@ -17,6 +17,7 @@ import { componentFactoryName } from '@angular/compiler';
 import { HomeComponent } from './common/components/home/home.component';
 import { TimerComponent } from './common/components/timer/timer.component';
 import { GameFormComponent } from './common/components/forms/game-form/game-form.component';
+import { SignupComponent } from './common/components/forms/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { GameFormComponent } from './common/components/forms/game-form/game-form
     BluffComponent,
     HomeComponent,
     TimerComponent,
-    GameFormComponent
+    GameFormComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
