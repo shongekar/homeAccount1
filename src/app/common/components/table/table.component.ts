@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-table',
+  selector: 'db-app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-export class TableComponent implements OnInit {
-
-  constructor() { }
+export class TableComponent implements {
+  @Input('tableColor') public tableColor:string = 'blue';
 
   ngOnInit() {
   }

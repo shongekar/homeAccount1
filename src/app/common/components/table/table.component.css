@@ -1,0 +1,19 @@
+db-game-table {
+    width: 700px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -175px 0 0 -350px;
+    border: 15px solid #8e1111;
+    box-shadow: 0px 0px 5px 1px #000 inset;
+    border-radius: 50px;
+    background-color: #003300;
+    background-image: url("/../assets/img/table-pattern.png");
+    animation: load 1s ease-in-out 0s forwards;
+ }
+  
+  @keyframes load {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
