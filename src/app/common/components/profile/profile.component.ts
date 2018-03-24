@@ -10,6 +10,7 @@ export class ProfileComponent{
   @Input('borderColor') public borderColor:string = 'grey';
   @Input('size') public size:string = 'medium';
   @Input('profileObj') public profileObj;
+  @Input('isActive') public isActive: boolean;
 
  // returns size in pixel based on large/medium
   public getSize(size: string): string {

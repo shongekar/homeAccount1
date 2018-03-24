@@ -6,6 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { componentFactoryName } from '@angular/compiler';
 import { HomeComponent } from './common/components/home/home.component';
 import { TimerComponent } from './common/components/timer/timer.component';
 import { GameFormComponent } from './common/components/forms/game-form/game-form.component';
+import { ProgressSpinnerComponent } from './common/components/progress-spinner/progress-spinner.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { GameFormComponent } from './common/components/forms/game-form/game-form
     BluffComponent,
     HomeComponent,
     TimerComponent,
-    GameFormComponent
+    GameFormComponent,
+    ProgressSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,7 @@ import { GameFormComponent } from './common/components/forms/game-form/game-form
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
+    MatProgressSpinnerModule,
     ReactiveFormsModule
   ],
   providers: [],

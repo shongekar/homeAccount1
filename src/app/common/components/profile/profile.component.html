@@ -1,5 +1,5 @@
-
 <div class="dbShapes-wrapper {{ profileObj.avatarShape }} dbThumbnail" [style.background]="borderColor" [style.width]="getSize(size)" [style.height]="getSize(size)">
+    <db-app-progress-spinner *ngIf="isActive" [timeout]="'10'"></db-app-progress-spinner>
     <div class="dbShape-inner {{ profileObj.avatarShape }}" [ngStyle]="{ 'background-image': 'url(' + profileObj.path + ')'}"></div>
 </div>
 <!-- This is to display Profile Name on mouse hover -->
