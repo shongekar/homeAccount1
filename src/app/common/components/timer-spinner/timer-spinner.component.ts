@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'db-app-progress-spinner',
-  templateUrl: './progress-spinner.component.html',
-  styleUrls: ['./progress-spinner.component.css']
+  selector: 'db-app-timer-spinner',
+  templateUrl: './timer-spinner.component.html',
+  styleUrls: ['./timer-spinner.component.css']
 })
-export class ProgressSpinnerComponent {
+export class TimerSpinnerComponent {
   mode = 'determinate';
 
   @Input() timeout: number;

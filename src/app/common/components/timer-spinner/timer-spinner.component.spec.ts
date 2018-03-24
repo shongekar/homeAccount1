@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProgressSpinnerComponent } from './progress-spinner.component';
+import { TimerSpinnerComponent } from './timer-spinner.component';
 
-describe('ProgressSpinnerComponent', () => {
-  let component: ProgressSpinnerComponent;
-  let fixture: ComponentFixture<ProgressSpinnerComponent>;
+describe('TimerSpinnerComponent', () => {
+  let component: TimerSpinnerComponent;
+  let fixture: ComponentFixture<TimerSpinnerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProgressSpinnerComponent ]
+      declarations: [ TimerSpinnerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProgressSpinnerComponent);
+    fixture = TestBed.createComponent(TimerSpinnerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

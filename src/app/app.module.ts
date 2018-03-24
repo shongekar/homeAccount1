@@ -18,7 +18,7 @@ import { componentFactoryName } from '@angular/compiler';
 import { HomeComponent } from './common/components/home/home.component';
 import { TimerComponent } from './common/components/timer/timer.component';
 import { GameFormComponent } from './common/components/forms/game-form/game-form.component';
-import { ProgressSpinnerComponent } from './common/components/progress-spinner/progress-spinner.component';
+import { TimerSpinnerComponent } from './common/components/timer-spinner/timer-spinner.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { ProgressSpinnerComponent } from './common/components/progress-spinner/p
     HomeComponent,
     TimerComponent,
     GameFormComponent,
-    ProgressSpinnerComponent
+    TimerSpinnerComponent
   ],
   imports: [
     BrowserModule,
