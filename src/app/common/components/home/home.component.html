@@ -1,2 +1,6 @@
-<h1>Wellcome to {{ title }}</h1>
-<a routerLink="/games/bluff">Bluff Game</a>
+<div>
+    <h1>Wellcome to {{ title }}</h1>
+    <div>   
+        <db-app-game-icon class="display" [link]="'/games/bluff'" [gameImage]="'assets/gameIcons/bluff.JPG'"></db-app-game-icon>
+    </div>
+</div>
