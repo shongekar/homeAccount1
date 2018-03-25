@@ -1,4 +1,4 @@
-<form [formGroup]="form">
+<!-- <form [formGroup]="form">
   <mat-form-field>
       <mat-select formControlName="playerCount" placeholder="Number of players" required>
           <mat-option *ngFor="let number of arrayOfNumberOfPlayers" [value]="number">{{ number }}</mat-option>
@@ -27,4 +27,22 @@
   <br>
   <button mat-raised-button color="primary" (click)="submitValue()">Submit</button> 
   <button mat-raised-button color="primary">Close</button>
-</form>
+</form> -->
+
+
+<body>
+  <button style="display:block;width:120px; height:30px;" onclick="document.getElementById('getFile').click()">Edit</button>
+  <img [src]="url" height="100">
+  <input type='file' id="getFile" (change)="onSelectFile($event)" style="display:none">
+</body>
+
+<!-- <label for="fileButton"><img src="http://i.pravatar.cc/500?img=7"></label>
+<br/>
+<input id="fileButton" type='file' (change)="onSelectFile($event)"> -->
+
+<!-- <div class='controls'>
+  <div id="File button">
+  <div style="position:absolute;">
+  <label for="fileButton"><img src="https://imageog.flaticon.com/icons/png/512/3/3901.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF" height="10"></label></div>
+  <input id="fileButton" type="file" name="file" width="2"/>
+</div></div> -->

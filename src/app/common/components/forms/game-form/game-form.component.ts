@@ -11,6 +11,19 @@ import { FormDataValidator } from '../../../validators/form-data.validator';
 
 export class GameFormComponent implements OnInit {
 
+
+  url: any;
+  onSelectFile(event:any) { // called each time file input changes
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event:any) => { // called once readAsDataURL is completed
+        this.url = event.target.result;
+      }
+    }
+}
   constructor() { }
 
   ngOnInit() {
