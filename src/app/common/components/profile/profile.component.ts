@@ -10,7 +10,7 @@ export class ProfileComponent{
   @Input('borderColor') public borderColor:string = 'grey';
   @Input('size') public size:string = 'medium';
   @Input('profileObj') public profileObj;
-  @Input('isActive') public isActive: boolean;
+  @Input('isActive') public isActive: boolean = false;
   @Input('timeout') public timeout: number;
 
  // returns size in pixel based on large/medium
