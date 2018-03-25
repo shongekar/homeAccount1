@@ -11,6 +11,7 @@ export class ProfileComponent{
   @Input('size') public size:string = 'medium';
   @Input('profileObj') public profileObj;
   @Input('isActive') public isActive: boolean;
+  @Input('timeout') public timeout: number;
 
  // returns size in pixel based on large/medium
   public getSize(size: string): string {
