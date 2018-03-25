@@ -6,5 +6,5 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bluff.component.css']
 })
 export class BluffComponent {
-  
+
 }

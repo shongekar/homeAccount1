@@ -23,4 +23,8 @@ export class ProfileComponent{
     }
   }
 
+  changeStatus(){
+    this.isActive = false;
+  }
+
 }

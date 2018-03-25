@@ -38,7 +38,7 @@ export class TimerSpinnerComponent {
       }, 1000);
     }
 
-    if(this.timeRemaining === 0) {
+    if(this.timeRemaining <= 0) {
       this.timeUp.emit(); // Emit event for the hosting component
     }
   };
