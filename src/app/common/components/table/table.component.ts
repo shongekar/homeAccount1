@@ -5,10 +5,6 @@ import { Component, Input } from '@angular/core';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-export class TableComponent implements {
+export class TableComponent {
   @Input('tableColor') public tableColor:string = 'blue';
-
-  ngOnInit() {
-  }
-
 }
