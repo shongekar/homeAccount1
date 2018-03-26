@@ -1,7 +1,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~bootstrap/dist/css/bootstrap.css";
 
-body{
+/* body{
     padding: 20px;
     background: #160f30;
 }
@@ -19,4 +19,4 @@ body::after {
     right: 0;
     position: absolute;
     z-index: -1;   
-}
+} */
