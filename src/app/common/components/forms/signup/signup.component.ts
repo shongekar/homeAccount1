@@ -26,21 +26,33 @@ export class SignupComponent implements OnInit {
                                     Validators.required, // Default validation
                                     FormDataValidator.spacialChars, // Custom validation
                                     Validators.pattern('^[a-zA-Z0-9]+$'), // Default validation
-                                    ]), 
+                                    ]),
     lastName: new FormControl('',  [ 
                                     FormDataValidator.noSpace, // Custom validation
                                     Validators.required, // Default validation
                                     FormDataValidator.spacialChars, // Custom validation
                                     Validators.pattern('^[a-zA-Z0-9]+$'), // Default validation
-                                    ]), 
-    emailID: new FormControl('', [ 
+                                    ]),
+    email: new FormControl('', [ 
                                   FormDataValidator.noSpace, // Custom validation
                                   Validators.required // Default validation
-                                  Validators.pattern('[a-zA-Z0-9]@[.com, .in, .net]+$'), // Default validation
+                                  Validators.email,
                                  ]), // Default validation
-    password: new FormControl('', Validators.required), // Default validation
-    confirmPassword: new FormControl('', Validators.required), // Default validation
-  });
+    password: new FormControl('', [
+                                    Validators.required,
+                                    Validators.minLength(6),
+                                    Validators.maxLength(16),
+                                  ]), // Default validation
+    confirmPassword: new FormControl('', [
+                                          Validators.required,
+                                          Validators.minLength(6),
+                                          Validators.maxLength(16),
+                                         ]), // Default validation
+  }, this.pwdMatchValidator);
+
+  pwdMatchValidator(frm: FormGroup) {
+    return frm.get('password').value === frm.get('confirmPassword').value ? null : {'mismatch': true};
+  }
 
   // Getter functions
   get firstName() {
@@ -51,8 +63,8 @@ export class SignupComponent implements OnInit {
     return this.form.get('lastName');
   }
 
-  get emailID() {
-    return this.form.get('emailID');
+  get email() {
+    return this.form.get('email');
   }
 
   get password() {
