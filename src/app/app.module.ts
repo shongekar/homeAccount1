@@ -19,6 +19,7 @@ import { HomeComponent } from './common/components/home/home.component';
 import { TimerComponent } from './common/components/timer/timer.component';
 import { GameFormComponent } from './common/components/forms/game-form/game-form.component';
 import { GameIconComponent } from './common/components/game-icon/game-icon.component';
+import { PasswordRecoveryFormComponent } from './common/components/forms/password-recovery-form/password-recovery-form.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { GameIconComponent } from './common/components/game-icon/game-icon.compo
     HomeComponent,
     TimerComponent,
     GameFormComponent,
-    GameIconComponent
+    GameIconComponent,
+    PasswordRecoveryFormComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,7 @@ import { GameIconComponent } from './common/components/game-icon/game-icon.compo
     MatSelectModule,
     MatButtonModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
