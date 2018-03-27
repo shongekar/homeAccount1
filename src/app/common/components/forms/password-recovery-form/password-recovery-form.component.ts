@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import { element } from 'protractor';
 import { FormControl, FormGroup, Validators, FormBuilder, ValidatorFn } from '@angular/forms';
@@ -13,7 +13,8 @@ export class PasswordRecoveryFormComponent{
 
   maxLength:number = 15;
   minLength:number = 8;
-
+  
+  @Input('email') public email:string = 'test@gmail.com';
   form = new FormGroup({
     password: new FormControl('', [Validators.required, // Default validation
                                   ]),
