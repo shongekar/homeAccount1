@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { Angular2TokenService } from 'angular2-token';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormDataValidator } from '../../../validators/form-data.validator';
+import { element } from 'protractor';
+
 
 @Component({
   selector: 'app-profile-form',
@@ -9,11 +12,53 @@ import { Angular2TokenService } from 'angular2-token';
 })
 export class ProfileFormComponent implements OnInit {
 
-  email = 'abc@gmail.com';
-  nickname = 'abc';
-  profileObj = {userID: '1', name: 'INDU', path: 'assets/ProfileImages/1.png', avatarShape: 'hexagon'};
-  borderColor = 'blue';
-  size = 'medium';
+  @Input() email: string = 'abc@gmail.com';
+  @Input() nickname: any = 'abc';
+  @Input() firstName: string = 'Dabba';
+  @Input() lastName: string = 'Baba';
+  @Input() profileObj = {userID: '1', name: 'INDU', path: 'assets/ProfileImages/1.png', avatarShape: 'hexagon'};
+  @Input() borderColor = 'blue';
+  @Input() size = 'medium';
+
+  // favoriteGames: any = ['game1', 'game2', 'game3'];
+  @Input() favoriteCardGame: any = ['game1', 'game2', 'game3'];
+
+  //  // Array to hold favorite card games. This will be used to render lists in templates
+  //  arrayOffavoriteCardGame: any = [];
+
+  //  // Creating an array to display list of numbers
+  //  getfavoriteCardGames(){
+  //   for (var element = this.favoriteCardGame; element <= this.favoriteCardGame; element++){
+  //     this.arrayOffavoriteCardGame.push(element);
+  //   }
+  // }
+
+  submitValue(){
+    console.log(this.form.value);
+  }
+
+  form = new FormGroup({
+    favoriteCardGames: new FormControl(), // Default validation
+    firstName: new FormControl('', [
+                                    FormDataValidator.spacialChars, // Custom validation
+                                    Validators.required, // Default validation
+                                    Validators.pattern('^[a-zA-Z0-9]+$'), // Default validation
+                                  ]),
+    lastName: new FormControl('', [
+                                    FormDataValidator.spacialChars, // Custom validation
+                                    Validators.required, // Default validation
+                                    Validators.pattern('^[a-zA-Z0-9]+$'), // Default validation
+                                  ]),
+    nickName: new FormControl('', [
+                                    Validators.required, // Default validation
+                                    Validators.pattern('^[a-zA-Z0-9]+$'), // Default validation
+                                  ])
+  });
+
+  //  // Getter functions
+  //  get favoriteCardGames(){
+  //   return this.form.get('favoriteCardGames');
+  // }
 
   url: any;
   onSelectFile(event:any) 
@@ -32,6 +77,7 @@ export class ProfileFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // this.getfavoriteCardGames();
   }
 
 }

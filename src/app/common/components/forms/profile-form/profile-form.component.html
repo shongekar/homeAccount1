@@ -8,7 +8,7 @@
 <div class = "dbProfileForm">
   <form [formGroup]="form"> 
     <mat-form-field >
-      <input matInput placeholder="Nickname" [value]="nickname">
+      <input matInput formControlName="nickName" placeholder="Nickname" value="nickName">
     </mat-form-field>
     <br>
     <mat-form-field >
@@ -28,8 +28,13 @@
     </mat-form-field>
     <br>
     <mat-form-field  style="width:400px">
-      <textarea matInput placeholder="Your Favorite Card Games"></textarea>
+      <!-- <textarea matInput placeholder="Your Favorite Card Games"></textarea>
       </mat-form-field>
+      <mat-form-field> -->
+        <mat-select formControlName="favoriteCardGames" placeholder="Your Favorite Card Games" multiple>
+            <mat-option *ngFor="let number of favoriteCardGame" [value]="number">{{ number }}</mat-option>
+        </mat-select>
+    </mat-form-field>
     <br>
     <button style="margin-left:100px;" mat-raised-button color="primary" (click)="submitValue()">Save</button> 
     <button mat-raised-button color="primary">Cancel</button>
