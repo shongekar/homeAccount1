@@ -27,5 +27,4 @@ export class FormDataValidator {
 
         return null;
     }
-
 }
