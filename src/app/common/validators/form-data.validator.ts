@@ -28,20 +28,4 @@ export class FormDataValidator {
         return null;
     }
 
-    static MatchPassword(control: AbstractControl) 
-    {
-        
-        var password = control['password']; // to get value in input tag
-        var confirmPassword = control['confirmPassword'];//control['confirmPassword'] // to get value in input tag
-        console.log(password);
-        console.log(confirmPassword);
-         if(password != confirmPassword) {
-             console.log('false');
-             control.get('confirmPassword').setErrors( {MatchPassword: true} )
-         } else {
-             console.log('true');
-             return null
-         }
-        return null;
-     }
 }
