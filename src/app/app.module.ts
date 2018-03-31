@@ -6,6 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -18,6 +19,7 @@ import { componentFactoryName } from '@angular/compiler';
 import { HomeComponent } from './common/components/home/home.component';
 import { TimerComponent } from './common/components/timer/timer.component';
 import { GameFormComponent } from './common/components/forms/game-form/game-form.component';
+import { TimerSpinnerComponent } from './common/components/timer-spinner/timer-spinner.component';
 import { GameIconComponent } from './common/components/game-icon/game-icon.component';
 
 @NgModule({
@@ -30,6 +32,7 @@ import { GameIconComponent } from './common/components/game-icon/game-icon.compo
     HomeComponent,
     TimerComponent,
     GameFormComponent,
+    TimerSpinnerComponent
     GameIconComponent
   ],
   imports: [
@@ -43,6 +46,7 @@ import { GameIconComponent } from './common/components/game-icon/game-icon.compo
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
+    MatProgressSpinnerModule,
     MatCardModule,
     ReactiveFormsModule
   ],
