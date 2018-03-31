@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import { element } from 'protractor';
 import { FormControl, FormGroup, Validators, FormBuilder, ValidatorFn } from '@angular/forms';
@@ -11,7 +11,7 @@ import { FormDataValidator } from '../../../validators/form-data.validator';
 })
 export class PasswordRecoveryFormComponent{
 
-  @Input('email') public email:string = 'test@gmail.com';
+  @Input('email') public email:string;
 
   form = new FormGroup({password: new FormControl('', [Validators.required,
                                                          Validators.minLength(6),
