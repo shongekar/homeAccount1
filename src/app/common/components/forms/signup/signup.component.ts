@@ -35,7 +35,7 @@ export class SignupComponent implements OnInit {
                                     ]),
     email: new FormControl('', [ 
                                   FormDataValidator.noSpace, // Custom validation
-                                  Validators.required // Default validation
+                                  Validators.required, // Default validation
                                   Validators.email,
                                  ]), // Default validation
     password: new FormControl('', [
