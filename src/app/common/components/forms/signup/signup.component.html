@@ -19,7 +19,7 @@
       <div>
         <mat-form-field>
           <input matInput formControlName="email" placeholder="Email address" required type="text">
-          <mat-error *ngIf="email.value !== ''">
+          <mat-error *ngIf="email.touched && email.errors && email.value !== ''">
             <span *ngIf="email.hasError('email', 'email') && email.get('email').touched">
               Please enter the correct email, this email not valid.
             </span>
