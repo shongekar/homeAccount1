@@ -32,7 +32,7 @@ import { GameIconComponent } from './common/components/game-icon/game-icon.compo
     HomeComponent,
     TimerComponent,
     GameFormComponent,
-    TimerSpinnerComponent
+    TimerSpinnerComponent,
     GameIconComponent
   ],
   imports: [
