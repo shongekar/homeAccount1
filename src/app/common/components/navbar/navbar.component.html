@@ -1,0 +1,28 @@
+<mat-toolbar class="mat-elevation-z6" color="primary">
+    
+  <p id="icon"> DB </p> 
+  
+  <span class="example-spacer"></span>
+  <label class="hello">Hello, <b>Rakshitha</b></label>
+  <button mat-button mat-icon-button [mat-menu-trigger-for]="menu">
+      <mat-icon mat-icon-button >
+          account_circle
+      </mat-icon>      
+  </button>
+
+  <button mat-button mat-icon-button [mat-menu-trigger-for]="notification">
+      <mat-icon mat-icon-button >
+          notifications
+      </mat-icon>      
+  </button>
+</mat-toolbar>
+
+<mat-menu x-position="before" #menu="matMenu">
+  <button mat-menu-item (click)="openProfile()">My Profile</button>
+  <button mat-menu-item>Logout</button>
+</mat-menu>
+
+<mat-menu x-position="before" #notification="matMenu">
+  <button mat-menu-item>Notification 1</button>
+  <button mat-menu-item>Notification 2</button>
+</mat-menu>    
