@@ -9,6 +9,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
+import {
+  MatMenuModule,
+  MatToolbarModule,
+  MatIconModule
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { CardComponent } from './common/components/card/card.component';
@@ -21,6 +26,7 @@ import { TimerComponent } from './common/components/timer/timer.component';
 import { GameFormComponent } from './common/components/forms/game-form/game-form.component';
 import { TimerSpinnerComponent } from './common/components/timer-spinner/timer-spinner.component';
 import { GameIconComponent } from './common/components/game-icon/game-icon.component';
+import { NavbarComponent } from './common/components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +39,8 @@ import { GameIconComponent } from './common/components/game-icon/game-icon.compo
     TimerComponent,
     GameFormComponent,
     TimerSpinnerComponent,
-    GameIconComponent
+    GameIconComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,10 @@ import { GameIconComponent } from './common/components/game-icon/game-icon.compo
     MatButtonModule,
     MatProgressSpinnerModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,  
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
