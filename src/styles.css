@@ -1,6 +1,23 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~bootstrap/dist/css/bootstrap.css";
 @import  "https://fonts.googleapis.com/icon?family=Material+Icons";
 
-body {
-    margin: 0px;
+body{
+    padding: 0px;
+    background: #160f30;
+}
+
+body::after {
+    content: "";
+    background-image: url("assets/img/body-bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
 }
