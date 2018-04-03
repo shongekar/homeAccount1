@@ -31,19 +31,19 @@ pwdMatchValidator(frm: FormGroup) {
       frm.get('confirmPassword').setErrors( {MatchPassword: true} )}
     else {
         console.log('true');
-        return null}
+        return null; }
 }
 
 get password() {
-  return this.form.get('password');
+    return this.form.get('password');
 }
 
 get confirmPassword() {
-  return this.form.get('confirmPassword')
+    return this.form.get('confirmPassword')
 }
 
 submitValue(){
-  console.log(this.form.get('password'));
+    console.log(this.form.get('password'));
 }
 
 }
