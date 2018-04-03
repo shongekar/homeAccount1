@@ -16,11 +16,11 @@ export class PasswordRecoveryFormComponent{
   pwdMaxLength: number = 16;
 
   form = new FormGroup({password: new FormControl('', [Validators.required,
-                                                         Validators.minLength(6),
-                                                         Validators.maxLength(16),]),
+                                                         Validators.minLength(this.pwdMinLength),
+                                                         Validators.maxLength(this.pwdMaxLength),]),
                         confirmPassword: new FormControl('', [Validators.required,
-                                                              Validators.minLength(6),
-                                                              Validators.maxLength(16),]),
+                                                              Validators.minLength(this.pwdMinLength),
+                                                              Validators.maxLength(this.pwdMaxLength),]),
                         }, this.pwdMatchValidator);
 
 pwdMatchValidator(frm: FormGroup) {
