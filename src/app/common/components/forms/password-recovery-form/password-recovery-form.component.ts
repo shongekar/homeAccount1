@@ -12,6 +12,8 @@ import { FormDataValidator } from '../../../validators/form-data.validator';
 export class PasswordRecoveryFormComponent{
 
   @Input('email') public email:string;
+  pwdMinLength: number = 6;
+  pwdMaxLength: number = 16;
 
   form = new FormGroup({password: new FormControl('', [Validators.required,
                                                          Validators.minLength(6),
@@ -27,9 +29,10 @@ pwdMatchValidator(frm: FormGroup) {
     if(password != confirmPassword) {
       console.log('false');
       frm.get('confirmPassword').setErrors( {MatchPassword: true} )}
-      else {
+    else {
         console.log('true');
-        return null}}
+        return null}
+}
 
 get password() {
   return this.form.get('password');
