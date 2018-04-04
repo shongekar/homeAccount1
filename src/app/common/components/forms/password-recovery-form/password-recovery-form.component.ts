@@ -21,18 +21,7 @@ export class PasswordRecoveryFormComponent{
                         confirmPassword: new FormControl('', [Validators.required,
                                                               Validators.minLength(this.pwdMinLength),
                                                               Validators.maxLength(this.pwdMaxLength),]),
-                        }, this.pwdMatchValidator);
-
-pwdMatchValidator(frm: FormGroup) {
-    var password = frm.get('password').value;
-    var confirmPassword = frm.get('confirmPassword').value;
-    if(password != confirmPassword) {
-      console.log('false');
-      frm.get('confirmPassword').setErrors( {MatchPassword: true} )}
-    else {
-        console.log('true');
-        return null; }
-}
+                        }, FormDataValidator.pwdMatchValidator);
 
 get password() {
     return this.form.get('password');

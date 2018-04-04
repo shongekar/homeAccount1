@@ -27,4 +27,16 @@ export class FormDataValidator {
 
         return null;
     }
+
+    // Validator function to check if Password and Confirm password fields match
+    static pwdMatchValidator(control: AbstractControl): ValidationErrors | null {
+        var password = control.get('password').value;
+        var confirmPassword = control.get('confirmPassword').value;
+        if(password != confirmPassword) {
+          console.log('false');
+          control.get('confirmPassword').setErrors({})}
+        else {
+            console.log('true');
+            return null; }
+    }
 }
